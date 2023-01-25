@@ -31,7 +31,8 @@ export const signup = async(req, res, next) => {
     
     //Create new user 
     const user = new User({
-        name, email, password:hashedPassword
+        name, email, password:hashedPassword,
+        blogs:[]
     })
     try{
         await user.save()
